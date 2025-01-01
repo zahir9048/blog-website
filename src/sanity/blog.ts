@@ -1,3 +1,5 @@
+import { Rule } from "@sanity/types"; // Import the correct type
+
 export default {
   name: "blog",
   type: "document",
@@ -12,13 +14,9 @@ export default {
       name: "desc",
       type: "string",
       title: "Description",
-      validation: (rule: any) => [
-        rule
-          .required()
-          .min(10)
-          .error("Min of 10 letters description required"),
-        rule.max(500).error("Max. description length is 500"),
-      ]
+      validation: (rule: Rule) => [
+        rule.required().min(10).error("Min of 10 letters description required"),
+      ],
     },
     {
       name: "image",
@@ -31,10 +29,16 @@ export default {
       title: "category",
     },
     {
+      name: "author",
+      type: "string",
+      title: "Author",
+      validation: (rule: Rule) => [rule.required()],
+    },
+    {
       name: "excerpt",
       type: "string",
       title: "excerpt",
-      validation: (rule: any) => [
+      validation: (rule: Rule) => [
         rule
           .required()
           .min(10)
@@ -46,7 +50,7 @@ export default {
       name: "date_posted",
       type: "date",
       title: "Date Posted",
-      validation: (rule:any) => rule.required()
+      validation: (rule: Rule) => rule.required(),
     },
   ],
 };

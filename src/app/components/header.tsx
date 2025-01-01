@@ -4,7 +4,7 @@ import Link from "next/link";
 export default async function Header() {
   return (
     <>
-      <header className="bg-transparent fixed top-0 left-0 w-full">
+      <header className="bg-[#00000045] fixed top-0 left-0 w-full">
         <div className="max-w-[1300px] h-[80px] mx-auto px-[50px] flex justify-between items-center text-white">
           <div>
             <a href="/">

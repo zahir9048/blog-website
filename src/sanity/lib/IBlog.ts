@@ -3,6 +3,7 @@
 export default interface IBlog {
   title: string;
   category: string;
+  author: string;
   desc: string;
   _id: string;
   excerpt: string;
