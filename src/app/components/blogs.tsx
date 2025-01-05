@@ -31,9 +31,9 @@ export default function Blogs({
   console.log(blogs);
 
   return (
-    <div id="all-blogs" className="max-w-[1300px] h-[full] mx-auto px-[20px] sm:px-[50px] flex flex-col items-start text-black py-[40px] sm:py-[100px]">
+    <div id="all-blogs" className="max-w-[1300px] justify-center h-[full] mx-auto px-[20px] sm:px-[50px] flex flex-col items-start text-black py-[40px] sm:py-[100px]">
       <h1 className="text-[36px] font-bold">Our Blogs</h1>
-      <Tabs
+      <Tabs className="custom-tab-wrapper"
         aria-label="Dynamic tabs"
         items={allCategories.map((category) => ({
           id: category,
@@ -46,15 +46,13 @@ export default function Blogs({
       >
         {(item) => (
           <Tab key={item.id} title={item.label}>
-            <div className="flex gap-[50px] mt-4 flex-wrap">
+            <div className="flex gap-[50px] mt-4 flex-wrap justify-center">
               {filteredBlogs.map((blog, index) => (
                 <a key={index} href={`/blog/${blog._id}`} className="relative max-w-[300px]">
                   <Card>
                     <CardBody className="p-0 flex flex-col gap-[7px]">
-                      <Image
-                      className="rounded-[5px] object-contain"
-                        width={310}
-                        height={200}
+                      <img
+                      className="rounded-[5px] object-cover h-[200px] w-[300px]"
                         alt={blog.title}
                         src={urlFor(blog.image.asset._ref).url()}
                       />

@@ -25,3 +25,17 @@ body {
     text-wrap: balance;
   }
 }
+
+.custom-tab-wrapper [data-slot="tabList"] {
+  flex-direction: column !important; /* Allow tabs to wrap */
+  overflow-x: visible !important; /* Remove horizontal scrolling */
+}
+
+@media screen and (min-width: 640px)
+{
+  .custom-tab-wrapper [data-slot="tabList"] {
+    flex-direction: row !important; /* Allow tabs to wrap */
+  }
+}
+
+
