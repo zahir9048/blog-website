@@ -13,14 +13,8 @@ export default async function Header() {
         <div className="max-w-[1300px] h-[80px] mx-auto px-[20px] sm:px-[50px] flex justify-between items-center text-white">
           <div>
             <a href="/">
-              {/* <Image
-                src="/logo.png"
-                width={100}
-                height={100}
-                alt="logo"
-              ></Image> */}
               <h2
-                className={`${league_spartan.className} font-bold text-[20px]`}
+                className={`${league_spartan.className} font-bold text-[28px]`}
               >
                 RUNO
               </h2>
