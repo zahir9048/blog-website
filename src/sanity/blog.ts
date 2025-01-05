@@ -52,5 +52,23 @@ export default {
       title: "Date Posted",
       validation: (rule: Rule) => rule.required(),
     },
+    {
+      name: "posterName",
+      type: "string",
+      title: "Poster Name",
+      validation: (rule: Rule) => rule.required(),
+    },
+    {
+      name: "posterDesignation",
+      type: "string",
+      title: "Poster Designation",
+      validation: (rule: Rule) => rule.required(),
+    },
+    {
+      name: "posterImage",
+      type: "image",
+      title: "Poster Image",
+      validation: (rule: Rule) => rule.required(),
+    }
   ],
 };

@@ -9,9 +9,8 @@ export async function fetchBlogs(): Promise<IBlog[]> {
 
 export async function fetchSingleBlog(blogId: string): Promise<IBlog> {
   console.log(blogId);
-  const query = '*[_type == "blog" && _id == $blogId]{title, category, desc, image, _id, excerpt, date_posted, author}[0]';
+  const query = '*[_type == "blog" && _id == $blogId]{title, category, desc, image, _id, excerpt, date_posted, author, posterName, posterDesignation, posterImage}[0]';
   const params = { blogId };
 
-  console.log(query);
   return await client.fetch(query, params);
 }

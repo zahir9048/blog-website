@@ -31,7 +31,7 @@ export default function Blogs({
   console.log(blogs);
 
   return (
-    <div className="max-w-[1300px] h-[full] mx-auto px-[50px] flex flex-col items-start text-black py-[100px]">
+    <div id="all-blogs" className="max-w-[1300px] h-[full] mx-auto px-[20px] sm:px-[50px] flex flex-col items-start text-black py-[40px] sm:py-[100px]">
       <h1 className="text-[36px] font-bold">Our Blogs</h1>
       <Tabs
         aria-label="Dynamic tabs"
@@ -46,7 +46,7 @@ export default function Blogs({
       >
         {(item) => (
           <Tab key={item.id} title={item.label}>
-            <div className="flex gap-[50px] mt-4">
+            <div className="flex gap-[50px] mt-4 flex-wrap">
               {filteredBlogs.map((blog, index) => (
                 <a key={index} href={`/blog/${blog._id}`} className="relative max-w-[300px]">
                   <Card>

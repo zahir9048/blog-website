@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import Header from "./components/header";
+import Footer from "./components/footer";
 import "bootstrap-icons/font/bootstrap-icons.css";
 import { Lora } from 'next/font/google';
 
@@ -26,6 +27,7 @@ export default function RootLayout({
       >
         <Header />
         {children}
+        <Footer />
       </body>
     </html>
   );

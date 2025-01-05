@@ -15,4 +15,13 @@ export default interface IBlog {
     };
     _type: string;
   };
+  posterName: string;
+  posterDesignation: string;
+  posterImage: {
+    asset: {
+      _ref: string;
+      _type: string;
+    };
+    _type: string;
+  };
 }
