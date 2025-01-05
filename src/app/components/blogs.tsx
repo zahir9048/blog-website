@@ -3,7 +3,6 @@ import { client } from "@/sanity/lib/client";
 import React, { useState } from "react";
 import imageUrlBuilder from "@sanity/image-url";
 import { Tabs, Tab, Card, CardBody } from "@nextui-org/react";
-import Image from "next/image";
 import IBlog from "@/sanity/lib/IBlog";
 
 const builder = imageUrlBuilder(client);
